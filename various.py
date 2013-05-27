@@ -27,3 +27,27 @@ for x in range(5):
 		print 'Uneven'
 	else:
 		print 'Even'
+
+
+for n in range(2, 10):
+    for x in range(2, n):
+        if n % x == 0:
+            print n, 'equals', x, '*', n/x
+            break
+    else:
+        # loop fell through without finding a factor
+        print n, 'is a prime number'
+
+def add(a,b):
+	result = a+b
+	print result
+	list = [result]
+	def sub():
+		c = a - b 
+		print c
+		list.append(c) # not possible to modify result here, but possible to modify mutable list
+	sub()
+	
+	print list
+
+add(10, 20)
